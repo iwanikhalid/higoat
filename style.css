@@ -159,9 +159,9 @@ html>body .pagination { padding: 0; }
 /*************** Menu */
 
 .menu, .menu ul li { color: #000; }
-.menu ul { width: 12em; }
+.menu ul { width: 13em; }
 .menu a { color: #444; text-align: center; text-decoration: none; color: #000; padding: 12px 18px; display: block; position: relative; }
-.menu ul a { background: #fd9c0a; padding: 10px 0; }
+.menu ul a { text-align: left; background: #fd9c0a; padding: 10px 19px; }
 .menu a:hover, .menu li:hover>a, .menu li.active a { color: #fff; }
 .menu ul a:hover { color: #eee; }
 .menu li a { border-right: 1px solid #fcdbab; border-left: 1px solid #c97e10; }
