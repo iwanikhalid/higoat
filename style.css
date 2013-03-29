@@ -19,6 +19,7 @@ body { background: #fff url(img/bg.png) repeat;  font: normal normal 14px/normal
 	#nav li:nth-child(6) a { background-position: 0 -32px;  }
 
 #content { padding: 15px 15px 20px; margin: 0 0 20px; min-height: 100px; height: auto !important; height: 100px; background: #98d21a;  -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);  }
+	#banner { margin: 0 0 15px; border: 10px solid #fff; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);  }
 	.col1 { width: 320px; margin: 0 15px 0 0; }
 	.col2 { width: 595px; }
 	.col3 { width: 595px; background: #c6fb54; margin: 0 15px 15px 0; padding: 15px 15px 10px; }
@@ -38,7 +39,12 @@ body { background: #fff url(img/bg.png) repeat;  font: normal normal 14px/normal
 	.tweet h3 { padding: 0 0 5px 40px; background: url(img/tweet.png) no-repeat; }
 	.tweet p { margin: 0 0 0 20px; font-size: 13px; }
 
-#banner { margin: 0 0 15px; border: 10px solid #fff; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);  }
+	#sidebar { width: 244px; }
+		#sidebar .col { margin: 0 0 20px; padding: 10px; width: 210px; background: #c6fb54;  -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); }
+		#sidebar h3 { font-weight: normal; text-transform: uppercase; padding: 0 0 5px; margin: 0 0 5px; border-bottom: 1px solid #a5e321; }
+		#sidebar ul { margin: 0 0 0 30px; }
+		#sidebar ul.sidemenu li { vertical-align: top;  line-height: 24px; list-style-image: url('img/arrow.png') ; }
+	#main { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); width: 656px; padding: 15px; background: #fff; min-height: 800px; height: auto !important; height: 800px; }
 #footer  { font-size: 13px; margin: 10px 0 0; }
 
 /* style, variant, weight, size, line-height, family */
@@ -53,6 +59,7 @@ a:hover { text-decoration: underline; }
 
 .clearfix { display: inline-block; }
 .clearfix:after { display: block; height: 0; clear: both; content: ".";  visibility: hidden; }
+.clear { clear: both; }
 
 /* Hides from IE-mac \*/
 * html .clearfix {height: 1%;}
@@ -67,6 +74,7 @@ img.floatr { margin: 0 0 0 10px; }
 .alignr { text-align: right; }
 .alignl { text-align: left; }
 .alignc { text-align: center; }
+.imgborder { border: 3px solid #fff; }
 
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; } /* www.aestheticallyloyal.com/public/optimize-legibility/ */ 
 html { -webkit-font-smoothing: antialiased; } /* maxvoltar.com/archive/-webkit-font-smoothing */
@@ -78,10 +86,45 @@ h4 { font-size: 0.9em; }
 h5 { font-size: 0.7em; }
 h6 { font-size: 0.5em; }
 
+/*************** Text and Boxes */
+.notice { background: #eee; text-align: center; margin: 10px 0; padding: 5px; }
+.yellowbox { background: #FFF9D7; border: 1px solid #E2C822; }
+.redbox { background:#FFDAD7; border:1px solid #E2223D; }
+.greenbox { background:#E5FFD7; border:1px solid #22E230; }
+.bluebox { background:#D7F6FF; border:1px solid #2285E2;}
+.blackbox { background: #000; color: #fff; text-shadow: none; padding: 3px; }	
+.yellowtxt { color: #ffde00; }
+.redtxt { color: #b71319; }
+.bluetxt { color: #6e95c4; }
+.greentxt { color: #4baf24; }
+#main blockquote { font: italic 18px/normal Georgia, serif;  width: 90%; margin: 10px; padding: 10px 40px; line-height: 1.45; position: relative; color: #383838; }
+#main blockquote:before { display: block; content: "\201C"; font-size: 80px; position: absolute; left: -20px; top: -20px; color: #7a7a7a; }
+#main blockquote cite { color: #999999; font-size: 14px; display: block; margin-top: 5px; }
+#main blockquote cite:before { content: "\2014 \2009"; }
+
+#main ul { margin:10px 0 20px 30px; }
+#main ul ul { margin:0 0 0 40px;} 
+#main ul li { list-style: disc outside url("img/li-diamond-black.gif") !important; }
+#main ul ul li { list-style: circle outside url("img/li-diamond-white.gif") !important;}
+#main ul ul ul li { list-style: square outside url("img/li-square.gif") !important;}
+#main ol { counter-reset: li;list-style: none;*list-style: decimal; padding: 0;margin: 0 0 20px 37px; }
+#main ol p{ line-height:19px;position: relative;display: block;padding: 0 .4em .4em 0; *padding: .4em; margin: -1px 0;}
+#main ol ol p:before{ background: #78abed; }
+#main ol ol ol p:before{ background: #ccc; }
+#main ol p:before{ content: counter(li);counter-increment: li;position: absolute;	left: -2.5em;top: 12px;margin-top: -0.9em;background: #377ad0; height: 17px;width: 14px;text-align: center;color:#fff; font: bold 10px/16px Arial;}	
+ul.dashboardSummary li { font-weight: bold; line-height: 1.8em; text-align: center; margin: 0 10px 0 0; background: #f4f4f4; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; width: 30%; list-style: none;  display: inline-block; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }	
+	ul.dashboardSummary li  h3 { margin: 0; font-size: 1.4em;  }
+	ul.dashboardSummary p { margin: 0; }
+
+#main form { box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46); background: #eee; padding: 10px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;  }
+#main form input[type=text], #main form textarea { border: 1px solid #ccc; }
+#main form select { width: auto;  }
 form label { padding: 5px 0 0; float: left; width: 25%; margin: 0 14px 0 0; }
 form p { margin: 15px 0; }
 form p:last-child { margin: 0 0 15px; }
-form input[type=text] { width: 60%; border: 0; padding: 8px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+form input[type=text].shorttxt { width: 20%; }
+form input[type=text].mediumtxt { width: 40%; }
+form input[type=text], form textarea { width: 60%; border: 0; padding: 8px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 form select { width: 100%; border: 0; padding: 8px 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 form input.fullTxt { width: 80%; }
 
@@ -144,6 +187,13 @@ input[type=submit]:after, .button:after {
         float: right;
         margin: 1px 0 0 50px;
 }
+
+/*************** Tables */
+table { text-shadow: none; border-collapse: collapse; width: 100%; }
+thead, tr.thead { background: #377ad0; color: #fff;  }
+thead td, tr.thead td { font: bold 12px Arial; padding: 5px; }
+td, th { text-align: center;  border: 1px solid #ccc; padding: 10px; }
+tr.alt { background: #e7f0fb; }
 
 /*************** Pagination styles */
 
